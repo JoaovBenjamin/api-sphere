@@ -7,7 +7,6 @@ import com.example.sphere.user.User;
 public record UserResponse(
     String name,
     String email,
-    String avatar,
     String bio,
     LocalDateTime createdAt,
     LocalDateTime updatedAt,
@@ -18,7 +17,6 @@ public record UserResponse(
         return new UserResponse(
                                 user.getName(), 
                                 user.getEmail(),
-                                user.getAvatar(), 
                                 user.getBio(), 
                                 user.getCreatedAt(), 
                                 user.getUpdatedAt(), 

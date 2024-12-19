@@ -5,10 +5,9 @@ import com.example.sphere.user.User;
 public record UserProfileResponse(
     String name,
     String  bio,
-    String avatar,
     String email
 ) {
     public UserProfileResponse(User user){
-        this(user.getName(), user.getBio(), user.getAvatar(), user.getEmail());
+        this(user.getName(), user.getBio(), user.getEmail());
     }
 }

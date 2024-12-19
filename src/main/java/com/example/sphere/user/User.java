@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table (name = "user")
+@Table (name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,7 +25,6 @@ public class User {
     String bio;
     String email;
     String password;
-    String avatar;
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 }
