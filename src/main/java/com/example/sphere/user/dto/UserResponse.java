@@ -9,6 +9,7 @@ public record UserResponse(
     String email,
     String bio,
     LocalDateTime createdAt,
+    String avatar,
     LocalDateTime updatedAt,
     Long id
 
@@ -18,7 +19,8 @@ public record UserResponse(
                                 user.getName(), 
                                 user.getEmail(),
                                 user.getBio(), 
-                                user.getCreatedAt(), 
+                                user.getCreatedAt(),
+                                user.getAvatar(), 
                                 user.getUpdatedAt(), 
                                 user.getId()
             );

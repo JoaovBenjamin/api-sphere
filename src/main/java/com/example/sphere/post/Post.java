@@ -1,11 +1,14 @@
-package com.example.sphere.user;
+package com.example.sphere.post;
 
 import java.time.LocalDateTime;
+
+import com.example.sphere.user.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,19 +16,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table (name = "users")
+@Table(name = "posts")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
-public class User {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Post {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name;
-    String bio;
-    String email;
-    String avatar;
-    String password;
+    String text;
     LocalDateTime createdAt;
-    LocalDateTime updatedAt;
+
+    @ManyToOne
+    User user;
 }
