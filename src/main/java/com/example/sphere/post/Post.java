@@ -27,6 +27,6 @@ public class Post {
     String text;
     LocalDateTime createdAt;
 
-    @ManyToOne
+    @ManyToOne  
     User user;
 }
